@@ -299,6 +299,54 @@ header .container nav a:hover::before {
   padding: var(--section-padding) 0;
 }
 .categories .container {
+  padding: 100px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 20px;
+}
+.categories .container .card {
+  border-radius: 3px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.categories .container .card .img-holder {
+  height: fit-content;
+}
+.categories .container .card .img-holder img {
+  max-width: 100%;
+}
+.categories .container .card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.422);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.categories .container .card h2 {
+  font-size: 26px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: var(--main-transition);
+}
+.categories .container .card:hover::after {
+  display: none;
+}
+.categories .container .card:hover h2 {
+  width: 100%;
+  padding: 20px 0;
+  color: #000;
+  top: 80%;
+  background-color: #fff;
 }
 /* animation */
 @keyframes change-color {
