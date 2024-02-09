@@ -238,7 +238,7 @@ header .container nav a:hover::before {
 /* start latest section */
 .latest {
   min-height: 100vh;
-  padding: var(--section-padding);
+  padding: var(--section-padding) 0;
 }
 .latest .container {
   padding: 100px 0 0;
@@ -347,6 +347,62 @@ header .container nav a:hover::before {
   color: #000;
   top: 80%;
   background-color: #fff;
+}
+/* start trends */
+.trends {
+  min-height: 100vh;
+  padding: var(--section-padding) 0;
+}
+.trends .container {
+  padding: 100px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 40px;
+}
+.trends .container .card {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.trends .container .card img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+.trends .container .card h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.trends .container .card p {
+  font-size: 18px;
+  color: var(--second-color);
+}
+.trends .container .card .more {
+  padding: 20px 0 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--main-color);
+}
+.trends .container .card .more a {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  flex: 1;
+}
+.trends .container .card .more i {
+  color: var(--main-color);
+  position: relative;
+}
+.trends .container .card .more a:hover + i {
+  animation: forward-backward 0.6s linear infinite;
 }
 /* animation */
 @keyframes change-color {
