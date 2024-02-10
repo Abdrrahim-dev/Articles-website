@@ -525,6 +525,58 @@ header .container nav a:hover::before {
     line-height: 2;
   }
 }
+/* start contact */
+footer {
+  padding: var(--section-padding) 0 0;
+  background-color: var(--main-color);
+  color: #fff;
+}
+footer p {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+footer .logo {
+  width: 150px;
+  margin: 30px auto;
+}
+footer .logo img {
+  width: 100%;
+}
+footer .social {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+footer .social i {
+  font-size: 22px;
+  margin-bottom: 30px;
+
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social i:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  border: none;
+}
+footer .copyright {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  color: var(--main-color);
+}
+footer .copyright span {
+  font-weight: bold;
+}
 /* animation */
 @keyframes change-color {
   0%,
