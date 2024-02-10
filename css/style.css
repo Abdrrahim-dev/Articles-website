@@ -252,13 +252,10 @@ header .container nav a:hover::before {
   border-radius: 15px;
   box-shadow: 0 0 10px #ddd;
 }
-.latest .container .card .img-holder {
-  height: 300px;
-  overflow: hidden;
+
+.latest .container .card img {
+  width: 100%;
   margin-bottom: 20px;
-}
-.latest .container .card .img-holder img {
-  max-width: 100%;
 }
 .latest .container .card h2 {
   margin: 0 0 20px;
@@ -413,10 +410,10 @@ header .container nav a:hover::before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
-  gap: 30px;
   padding: 100px 0 0;
 }
 .profiles .container .card {
+  margin: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px #ddd;
   display: flex;
@@ -469,6 +466,64 @@ header .container nav a:hover::before {
   background-color: var(--main-color);
   color: #fff;
   border: none;
+}
+/* newsletter */
+.newsletter {
+  min-height: 100vh;
+  padding: var(--section-padding) 0;
+}
+.newsletter .container {
+  padding: var(--section-padding) 0 0;
+}
+.newsletter .container p {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.newsletter .container form {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 60px;
+  background-color: #ddd;
+  padding: 20px;
+}
+.newsletter .container form input[type="email"] {
+  flex: 1;
+  font-size: 22px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+.newsletter .container form input[type="submit"] {
+  font-size: 22px;
+  padding: 20px;
+  border-radius: 31px;
+  border: none;
+  margin-left: 20px;
+  color: #fff;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .newsletter .container form {
+    width: 90%;
+  }
+  .newsletter .container form input[type="email"],
+  .newsletter .container form input[type="submit"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .newsletter .container form input[type="submit"] {
+    margin-left: 10px;
+  }
+  .newsletter .container p {
+    padding: 0 100px;
+    line-height: 2;
+  }
 }
 /* animation */
 @keyframes change-color {
